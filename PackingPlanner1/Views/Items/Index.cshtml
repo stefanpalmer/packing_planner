@@ -1,0 +1,15 @@
+﻿@model IEnumerable<PackingPlanner1.Models.Item>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Items</h2>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        @item.Name;
+    }
+</ul>
+
