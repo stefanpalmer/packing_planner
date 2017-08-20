@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using PackingPlanner1.Models;
+using PackingPlanner1.ViewModels;
 
 namespace PackingPlanner1.Controllers
 {

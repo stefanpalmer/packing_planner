@@ -207,6 +207,10 @@
     <Compile Include="Migrations\201708091502059_AddCategory.Designer.cs">
       <DependentUpon>201708091502059_AddCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708201612436_AddItemFormViewModel.cs" />
+    <Compile Include="Migrations\201708201612436_AddItemFormViewModel.Designer.cs">
+      <DependentUpon>201708201612436_AddItemFormViewModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
@@ -215,6 +219,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\ItemFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -302,6 +307,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708091502059_AddCategory.resx">
       <DependentUpon>201708091502059_AddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708201612436_AddItemFormViewModel.resx">
+      <DependentUpon>201708201612436_AddItemFormViewModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
