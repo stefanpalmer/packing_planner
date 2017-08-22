@@ -211,6 +211,10 @@
     <Compile Include="Migrations\201708201612436_AddItemFormViewModel.Designer.cs">
       <DependentUpon>201708201612436_AddItemFormViewModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708220932122_PopulateCategories.cs" />
+    <Compile Include="Migrations\201708220932122_PopulateCategories.Designer.cs">
+      <DependentUpon>201708220932122_PopulateCategories.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
@@ -310,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708201612436_AddItemFormViewModel.resx">
       <DependentUpon>201708201612436_AddItemFormViewModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708220932122_PopulateCategories.resx">
+      <DependentUpon>201708220932122_PopulateCategories.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
