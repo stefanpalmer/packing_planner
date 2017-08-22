@@ -5,11 +5,30 @@
 }
 
 <h2>Items</h2>
+@if (!Model.Any())
+{
+    <p>There are no items saved.</p>
+}
 
-<ul>
-    @foreach (var item in Model)
-    {
-        <li>@item.Name</li>
-    }
-</ul>
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Category.Id</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
 
