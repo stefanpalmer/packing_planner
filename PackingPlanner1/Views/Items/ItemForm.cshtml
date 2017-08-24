@@ -1,0 +1,26 @@
+﻿@model PackingPlanner1.ViewModels.ItemFormViewModel
+
+@{
+    ViewBag.Title = "ItemForm";
+}
+
+<h2>New Item</h2>
+
+@using (Html.BeginForm("Save", "Items"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Item.Name)
+        @Html.TextBoxFor(m => m.Item.Name, new { @class = "form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Item.Quantity)
+        @Html.TextBoxFor(m => m.Item.Quantity, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Item.Category.Id)
+        @Html.DropDownListFor(m => m.Item.Category.Id, new SelectList(Model.Category, "Id", "Name"), "Select Category", new { @class = "form-control" })
+    </div>
+    @Html.HiddenFor(m => m.Item.Id)
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+
