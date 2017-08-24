@@ -30,5 +30,49 @@ namespace PackingPlanner1.Controllers
             return View(itemsInDb);
         }
 
+        public ActionResult New()
+        {
+            var viewModel = new ItemFormViewModel
+            {
+                Item = new Item(),
+                Category = _context.Categories.ToList()
+            };
+            return View("ItemForm", viewModel);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var itemInDb = _context.Items.SingleOrDefault(i => i.Id == id);
+
+            if (itemInDb == null)
+                return HttpNotFound();
+
+            var viewModel = new ItemFormViewModel
+            {
+                Item = itemInDb,
+                Category = _context.Categories.ToList()
+            };
+
+            return View("ItemForm", viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Save(Item item)
+        {
+            if (item.Id == 0)
+                _context.Items.Add(item);
+            else
+            {
+                var itemInDb = _context.Items.Single(i => i.Id == item.Id);
+
+                itemInDb.Name = item.Name;
+                itemInDb.Quantity = item.Quantity;
+                itemInDb.Category.Id = item.Category.Id;
+            }
+
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Items");
+
+        }
     }
 }
