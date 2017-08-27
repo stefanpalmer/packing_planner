@@ -18,6 +18,7 @@ else
                 <th>Item</th>
                 <th>Quantity</th>
                 <th>Category</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -27,6 +28,10 @@ else
                     <td>@item.Name</td>
                     <td>@item.Quantity</td>
                     <td>@item.Category.Name</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", "Items", new { id = item.Id }, new { @class = "btn btn-primary" })
+                        @Html.ActionLink("Packed", "Delete", "Items", new { id = item.Id }, new { @class = "btn btn-primary" })
+                    </td>
                 </tr>
             }
         </tbody>
