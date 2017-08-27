@@ -67,7 +67,7 @@ namespace PackingPlanner1.Controllers
 
                 itemInDb.Name = item.Name;
                 itemInDb.Quantity = item.Quantity;
-                itemInDb.Category.Id = item.Category.Id;
+                itemInDb.CategoryId = item.CategoryId;
             }
 
             _context.SaveChanges();

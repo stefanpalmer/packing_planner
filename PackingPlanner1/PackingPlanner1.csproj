@@ -219,6 +219,10 @@
     <Compile Include="Migrations\201708240139361_RemoveUnnecessaryCategoryId.Designer.cs">
       <DependentUpon>201708240139361_RemoveUnnecessaryCategoryId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708251119283_FixCategoryIdMistake.cs" />
+    <Compile Include="Migrations\201708251119283_FixCategoryIdMistake.Designer.cs">
+      <DependentUpon>201708251119283_FixCategoryIdMistake.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
@@ -325,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708240139361_RemoveUnnecessaryCategoryId.resx">
       <DependentUpon>201708240139361_RemoveUnnecessaryCategoryId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708251119283_FixCategoryIdMistake.resx">
+      <DependentUpon>201708251119283_FixCategoryIdMistake.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
