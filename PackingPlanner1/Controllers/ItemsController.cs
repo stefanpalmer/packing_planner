@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using PackingPlanner1.Models;
 using PackingPlanner1.ViewModels;
+using System.Net;
 
 namespace PackingPlanner1.Controllers
 {
@@ -56,6 +57,36 @@ namespace PackingPlanner1.Controllers
             return View("ItemForm", viewModel);
         }
 
+        //public ActionResult Delete(int id)
+        //{
+        //    //if (id == null)
+        //    //{
+        //    //    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    //}
+
+        //    var itemInDb = _context.Items.SingleOrDefault(i => i.Id == id);
+
+        //    if (itemInDb == null)
+        //        return HttpNotFound();
+
+        //    var viewModel = new ItemFormViewModel
+        //    {
+        //        Item = itemInDb,
+        //        Category = _context.Categories.ToList()
+        //    };
+
+        //    return View(viewModel);
+        //}
+
+        //[HttpPost, ActionName("Delete")]
+        //public ActionResult DeleteConfirmed(int id)
+        //{
+        //    var itemInDb = _context.Items.SingleOrDefault(i => i.Id == id);
+        //    _context.Items.Remove(itemInDb);
+        //    _context.SaveChanges();
+        //    return RedirectToAction("Index", "Items");
+        //}
+
         [HttpPost]
         public ActionResult Save(Item item)
         {
@@ -72,7 +103,21 @@ namespace PackingPlanner1.Controllers
 
             _context.SaveChanges();
             return RedirectToAction("Index", "Items");
+        }
 
+
+        [HttpDelete]
+        public ActionResult Delete(int id)
+        {
+            var itemInDb = _context.Items.SingleOrDefault(i => i.Id == id);
+
+            if (itemInDb == null)
+                return HttpNotFound();
+
+            _context.Items.Remove(itemInDb);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Items");
         }
     }
 }
