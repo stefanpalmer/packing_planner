@@ -29,8 +29,8 @@ else
                     <td>@item.Quantity</td>
                     <td>@item.Category.Name</td>
                     <td>
-                        @Html.ActionLink("Edit", "Edit", "Items", new { id = item.Id }, new { @class = "btn btn-primary" })
-                        @Html.ActionLink("Packed", "Delete", "Items", new { id = item.Id }, new { @class = "btn btn-primary" })
+                        @Html.ActionLink("Edit", "Edit", "Items", new { id = item.Id }, new { @class = "btn btn-default" })
+                        @Html.ActionLink("Packed", "Delete", "Items", new { id = item.Id }, new { @class = "btn btn-success" })
                     </td>
                 </tr>
             }
