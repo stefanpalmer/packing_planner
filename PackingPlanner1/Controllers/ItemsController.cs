@@ -60,6 +60,17 @@ namespace PackingPlanner1.Controllers
         [HttpPost]
         public ActionResult Save(Item item)
         {
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new ItemFormViewModel
+                {
+                    Item = item,
+                    Category = _context.Categories.ToList()
+                };
+
+                return View("ItemForm", viewModel);
+            }
+
             if (item.Id == 0)
                 _context.Items.Add(item);
             else
