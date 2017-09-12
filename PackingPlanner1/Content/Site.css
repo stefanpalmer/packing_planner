@@ -29,3 +29,57 @@ textarea {
     font-size: 72px;
     margin-top: 45px;
 }
+
+#suitcase {
+    margin-top: 20px;
+}
+
+#guitar {
+    margin-top: 70px;
+}
+
+#jeans {
+    margin-top: 20px;
+}
+
+#book {
+    margin-top: 20px;
+}
+
+#goggles {
+    margin-top: -100px;
+}
+
+#boot {
+    margin-top: -100px;
+}
+
+#shirt {
+    margin-top: -60px;
+}
+
+#jar {
+    margin-top: 120px;
+}
+
+#hat {
+    margin-top: 120px;
+}
+
+#socks {
+    margin-top: 25px;
+    margin-left: -100px;
+}
+
+.table {
+    border: 0.1px solid #383866;
+}
+
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+    border: 0.1px solid #383866;
+}
