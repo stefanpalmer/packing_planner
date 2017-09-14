@@ -231,6 +231,22 @@
     <Compile Include="Migrations\201709121010329_AddQuantityRequiredAnnotation.Designer.cs">
       <DependentUpon>201709121010329_AddQuantityRequiredAnnotation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709121500227_ChangeQuantityType.cs" />
+    <Compile Include="Migrations\201709121500227_ChangeQuantityType.Designer.cs">
+      <DependentUpon>201709121500227_ChangeQuantityType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709121524119_AddMinimumValueForQuantity.cs" />
+    <Compile Include="Migrations\201709121524119_AddMinimumValueForQuantity.Designer.cs">
+      <DependentUpon>201709121524119_AddMinimumValueForQuantity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709132054576_ChangeMinimumQuantityValue.cs" />
+    <Compile Include="Migrations\201709132054576_ChangeMinimumQuantityValue.Designer.cs">
+      <DependentUpon>201709132054576_ChangeMinimumQuantityValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709132342268_ChangeType.cs" />
+    <Compile Include="Migrations\201709132342268_ChangeType.Designer.cs">
+      <DependentUpon>201709132342268_ChangeType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
@@ -364,6 +380,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709121010329_AddQuantityRequiredAnnotation.resx">
       <DependentUpon>201709121010329_AddQuantityRequiredAnnotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709121500227_ChangeQuantityType.resx">
+      <DependentUpon>201709121500227_ChangeQuantityType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709121524119_AddMinimumValueForQuantity.resx">
+      <DependentUpon>201709121524119_AddMinimumValueForQuantity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709132054576_ChangeMinimumQuantityValue.resx">
+      <DependentUpon>201709132054576_ChangeMinimumQuantityValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709132342268_ChangeType.resx">
+      <DependentUpon>201709132342268_ChangeType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

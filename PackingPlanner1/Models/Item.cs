@@ -14,7 +14,8 @@ namespace PackingPlanner1.Models
         public string Name { get; set; }
 
         [Required]
-        public byte Quantity { get; set; }
+        [Range(0.01, Int32.MaxValue)]
+        public float Quantity { get; set; }
 
         public Category Category { get; set; }
 
