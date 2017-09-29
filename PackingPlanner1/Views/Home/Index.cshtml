@@ -15,6 +15,9 @@
         <div class="col-md-1 col-sm-1">
             <img src="~/Images/hat.png" alt="Hat Image" id="hat" class="img-responsive" />
         </div>
+        <div class="col-sm-3 col-sm-push-1">
+            @Html.ActionLink("New Item", "New", "Items", null, new { @class = "btn btn-primary btn-lg new-button" })
+        </div>
     </div>
     <div class="row">
         <div class="col-md-3 col-sm-3">
@@ -32,6 +35,9 @@
         <div class="col-md-1 col-sm-1">
             <img src="~/Images/socks.png" alt="Socks Image" id="socks" class="img-responsive" />
         </div>
+        <div class="col-sm-3 col-sm-push-1">
+            @Html.ActionLink("Item List", "Index", "Items", null, new { @class = "btn btn-danger btn-lg" })
+        </div>
     </div>
     <div class="row">
         <div class="col-md-1 col-sm-1 col-md-push-3 col-sm-push-3">
@@ -39,6 +45,9 @@
         </div>
         <div class="col-md-1 col-sm-1 col-md-push-3 col-sm-push-3">
             <img src="~/Images/hikingboot.png" alt="Boot Image" id="boot" class="img-responsive" />
+        </div>
+        <div class="col-sm-3 col-sm-push-7">
+            @Html.ActionLink("About", "About", "Home", null, new { @class = "btn btn-warning btn-lg about-button" })
         </div>
     </div>
     <div class="row">

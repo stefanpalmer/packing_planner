@@ -27,7 +27,7 @@ textarea {
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 72px;
-    margin-top: 45px;
+    margin-top: 20px;
 }
 
 #suitcase {
@@ -82,4 +82,13 @@ textarea {
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
     border: 0.1px solid #383866;
+}
+
+.new-button {
+    margin-top: 80px;
+}
+
+.about-button {
+    margin-top: -200px;
+    margin-left: -10px;
 }
