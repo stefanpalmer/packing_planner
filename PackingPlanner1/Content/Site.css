@@ -100,3 +100,7 @@ textarea {
 .input-validation-error {
     border: 2px solid #ff232e;
 }
+
+.validation-summary-errors {
+    color: #ff232e;
+}

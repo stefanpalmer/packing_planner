@@ -8,6 +8,7 @@
 
 @using (Html.BeginForm("Save", "Items"))
 {
+    @*@Html.ValidationSummary(true, "Please fix the following errors :")*@
     <div class="form-group">
         @Html.LabelFor(m => m.Item.Name)
         @Html.TextBoxFor(m => m.Item.Name, new { @class = "form-control"})
@@ -27,3 +28,7 @@
     <button type="submit" class="btn btn-info">Save</button>
 }
 
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}
