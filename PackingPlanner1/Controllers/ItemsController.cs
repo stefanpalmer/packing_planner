@@ -58,6 +58,7 @@ namespace PackingPlanner1.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Item item)
         {
             if (!ModelState.IsValid)
