@@ -92,3 +92,11 @@ textarea {
     margin-top: -200px;
     margin-left: -10px;
 }
+
+.field-validation-error {
+    color: #ff232e;
+}
+
+.input-validation-error {
+    border: 2px solid #ff232e;
+}
