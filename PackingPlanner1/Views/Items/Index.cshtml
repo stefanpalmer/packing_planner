@@ -12,7 +12,7 @@
 
 else
 {
-    <table class="items table table-bordered table-hover">
+    <table class="items table table-bordered table-hover" id="items-tbl">
         <thead>
             <tr>
                 <th>Item</th>
@@ -36,6 +36,15 @@ else
             }
         </tbody>
     </table>
+}
+
+@section scripts 
+{
+    <script>
+        $(document).ready(function () {
+            $('#items-tbl').DataTable();
+        });
+    </script>
 }
 
 
