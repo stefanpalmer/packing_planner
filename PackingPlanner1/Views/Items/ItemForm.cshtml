@@ -21,7 +21,7 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Item.CategoryId)
-        @Html.DropDownListFor(m => m.Item.CategoryId, new SelectList(Model.Category, "Id", "Name"), "Select Category", new { @class = "form-control" })
+        @Html.DropDownListFor(m => m.Item.CategoryId, new SelectList(Model.Category, "Id", "Name"), "Select Category", new { @class = "form-control"})
         @Html.ValidationMessageFor(m => m.Item.CategoryId)
     </div>
     @Html.HiddenFor(m => m.Item.Id)
@@ -29,6 +29,23 @@
     <button type="submit" class="btn btn-info">Save</button>
 }
 
+<div class="row">
+    @*<div class="col-md-6">
+        <img src="~/Images/boxes2.png" alt="Boxes Image" id="boxes" class="img-responsive" />
+    </div>*@
+    <div class="col-md-5 col-md-push-7 col-sm-5">
+        <img src="~/Images/weather.png" alt="Box Image" id="box" class="img-responsive" />
+    </div>
+</div>
+
+<div class="row">
+        <div class="col-md-6">
+            <img src="~/Images/boxes2.png" alt="Boxes Image" id="boxes" class="img-responsive" />
+        </div>
+        @*<div class="col-md-3 col-md-push-8">
+            <img src="~/Images/box6.png" alt="Full Box" id="fullbox" class="img-responsive" />
+        </div>*@
+    </div>
 @section scripts
 {
     @Scripts.Render("~/bundles/jqueryval")

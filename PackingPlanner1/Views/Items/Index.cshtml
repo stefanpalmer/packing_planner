@@ -30,7 +30,7 @@ else
                     <td>@item.Category.Name</td>
                     <td>
                         @Html.ActionLink("Edit", "Edit", "Items", new { id = item.Id }, new { @class = "btn btn-default" })
-                        @Html.ActionLink("Packed", "Delete", "Items", new { id = item.Id }, new { @class = "btn btn-success" })
+                        @Html.ActionLink("Packed", "Delete", "Items", new { id = item.Id }, new { @class = "btn btn-success", onclick = "return confirm('This item is in the suitcase?')" })
                     </td>
                 </tr>
             }
@@ -42,7 +42,10 @@ else
 {
     <script>
         $(document).ready(function () {
-            $('#items-tbl').DataTable();
+            $('#items-tbl').DataTable({
+                "aLengthMenu": [[5, 10, -1], [5, 10, "All"]],
+                "iDisplayLength": 10
+            });
         });
     </script>
 }

@@ -71,6 +71,20 @@ textarea {
     margin-left: -100px;
 }
 
+#box {
+    margin-top: -250px;
+    margin-left: -20px;
+}
+
+#boxes {
+    margin-top: 90px;
+}
+
+#fullbox {
+    margin-top: -180px;
+    margin-left: -40px;
+}
+
 .table {
     border: 0.1px solid #383866;
 }
@@ -104,3 +118,4 @@ textarea {
 .validation-summary-errors {
     color: #ff232e;
 }
+
