@@ -527,6 +527,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Items\Index.cshtml" />
     <Content Include="Views\Items\ItemForm.cshtml" />
+    <Content Include="Views\Items\Packed.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

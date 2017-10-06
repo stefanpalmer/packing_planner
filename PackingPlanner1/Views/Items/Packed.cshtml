@@ -1,0 +1,24 @@
+﻿@model PackingPlanner1.ViewModels.ItemFormViewModel
+
+@{
+    ViewBag.Title = "Packed";
+}
+
+<h2>Packed!!!</h2>
+<br />
+<h4>Are you sure that you have packed the <strong>@Model.Item.Name</strong>?</h4>
+<br /><br />
+
+@using (Html.BeginForm())
+{
+    <div class="row">
+        <div class="col-md-3">
+            <input type="submit" value="Yes, safe in the Suitcase" class="btn btn-success" />
+        </div>
+        <div class="col-md-2">
+            @Html.ActionLink("No, why am I here?", "Index", "Items", null, new { @class = "btn btn-danger" })
+        </div>
+    </div>
+    
+}
+
