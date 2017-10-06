@@ -88,20 +88,6 @@ namespace PackingPlanner1.Controllers
             return RedirectToAction("Index", "Items");
         }
 
-
-        public ActionResult Delete(int id)
-        {
-            var itemInDb = _context.Items.SingleOrDefault(i => i.Id == id);
-
-            if (itemInDb == null)
-                return HttpNotFound();
-
-            _context.Items.Remove(itemInDb);
-            _context.SaveChanges();
-
-            return RedirectToAction("Index", "Items");
-        }
-
         public ActionResult Packed(int id)
         {
  
@@ -119,8 +105,33 @@ namespace PackingPlanner1.Controllers
             return View(viewModel);
         }
 
+        public ActionResult Delete(int id)
+        {
+            var itemInDb = _context.Items.SingleOrDefault(i => i.Id == id);
+
+            if (itemInDb == null)
+                return HttpNotFound();
+
+            var viewModel = new ItemFormViewModel
+            {
+                Item = itemInDb,
+                Category = _context.Categories.ToList()
+            };
+
+            return View(viewModel);
+        }
+
         [HttpPost, ActionName("Packed")]
         public ActionResult PackedConfirmed(int id)
+        {
+            var itemInDb = _context.Items.SingleOrDefault(i => i.Id == id);
+            _context.Items.Remove(itemInDb);
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Items");
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
         {
             var itemInDb = _context.Items.SingleOrDefault(i => i.Id == id);
             _context.Items.Remove(itemInDb);

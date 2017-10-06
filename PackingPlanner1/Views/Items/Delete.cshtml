@@ -1,0 +1,26 @@
+﻿@model PackingPlanner1.ViewModels.ItemFormViewModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<br />
+<h4>Are you sure you want to remove the <strong>@Model.Item.Name</strong> entry ?</h4>
+<br /><br />
+
+@using (Html.BeginForm())
+{
+    <div class="row">
+        <div class="col-md-1">
+            <input type="submit" value="Yes" class="btn btn-primary" />
+        </div>
+        <div class="col-md-1">
+            @Html.ActionLink("No", "Index", "Items", null, new { @class = "btn btn-primary" })
+        </div>
+    </div>
+
+}
+
+
+
+
