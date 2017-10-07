@@ -15,7 +15,7 @@ namespace PackingPlanner1.Models
 
         [Required]
         [Range(0.01, Int32.MaxValue, ErrorMessage = "Value has to be greater than zero.")]
-        public float Quantity { get; set; }
+        public short Quantity { get; set; }
 
         public Category Category { get; set; }
 

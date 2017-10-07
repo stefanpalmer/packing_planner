@@ -247,6 +247,14 @@
     <Compile Include="Migrations\201709132342268_ChangeType.Designer.cs">
       <DependentUpon>201709132342268_ChangeType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710062345581_ChangeValueToUshort.cs" />
+    <Compile Include="Migrations\201710062345581_ChangeValueToUshort.Designer.cs">
+      <DependentUpon>201710062345581_ChangeValueToUshort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710062351071_ChangeValueToShort.cs" />
+    <Compile Include="Migrations\201710062351071_ChangeValueToShort.Designer.cs">
+      <DependentUpon>201710062351071_ChangeValueToShort.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
@@ -578,6 +586,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709132342268_ChangeType.resx">
       <DependentUpon>201709132342268_ChangeType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710062345581_ChangeValueToUshort.resx">
+      <DependentUpon>201710062345581_ChangeValueToUshort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710062351071_ChangeValueToShort.resx">
+      <DependentUpon>201710062351071_ChangeValueToShort.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
