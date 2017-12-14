@@ -111,6 +111,10 @@ textarea {
     margin-left: 8px;
 }
 
+.btn-new {
+    margin-top: 22px;
+}
+
 .field-validation-error {
     color: #ff232e;
 }

@@ -27,6 +27,7 @@
     @Html.HiddenFor(m => m.Item.Id)
     @Html.AntiForgeryToken()
     <button type="submit" class="btn btn-info">Save</button>
+    @Html.ActionLink("Cancel", "Index", "Home", null, new { @class = "btn btn-primary" })
 }
 
 <div class="row">
